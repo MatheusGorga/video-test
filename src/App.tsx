@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar';
 import VideoContent from './components/VideoContent';
 
 export interface AppProps {
-  videos : {
+  videos: {
     id: string;
     title: string;
     link: string;
@@ -13,14 +13,14 @@ export interface AppProps {
   }
 }
 
-function App() {  
+function App() {
   const [videoLesson, setVideoLesson] = useState<never[]>([])
   const [videoActive, setVideoActive] = useState('')
 
   useEffect(() => {
-    const load = async() =>{
-      const data =  await fetch(
-       'http://localhost:1337/api/paginas/1?populate=conteudo' ,
+    const load = async () => {
+      const data = await fetch(
+        'http://localhost:1337/api/paginas/1?populate=conteudo' ,
       );
       const json = await data.json();
       const pageData = json;
@@ -29,9 +29,9 @@ function App() {
     }
 
     load();
-  },[])
+  }, [])
 
-  function ativarVideo(link){
+  function ativarVideo(link) {
     setVideoActive(link)
   }
 
@@ -39,32 +39,13 @@ function App() {
   return (
     <div className="App">
 
-  
-   
-    <VideoContent  videosEnvi={videoLesson} isVideoActive={videoActive}  descriptionActiveVideo={videoLesson.filter((video) => video.link === videoActive )} />
-    <Sidebar videosEnvi={videoLesson} isActiveVideo={ativarVideo} />
+
+
+      <VideoContent videosEnvi={videoLesson} isVideoActive={videoActive} descriptionActiveVideo={videoLesson.filter((video) => video.link === videoActive)} />
+      <Sidebar videosEnvi={videoLesson} isActiveVideo={ativarVideo} />
 
     </div>
   )
 }
 
 export default App
-
-
-
-
-
-
-
-
-
-
-/* {videos?.map( (video) => {
-  return (
-    <div key={video.id}>
-      <li>
-        {video.title}
-      </li>
-    </div>
-  )
-} )} */

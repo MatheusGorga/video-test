@@ -20,9 +20,9 @@ interface VideoProps {
 
 export const Loading = () => {
   return (
-  <div>
-    ola mundo
-  </div>
+    <div>
+      ola mundo
+    </div>
   )
 }
 
@@ -30,7 +30,7 @@ export const Loading = () => {
 
 function VideoContent({ videosEnvi, isVideoActive, descriptionActiveVideo }: VideoProps) {
   const videoParaAssistir = isVideoActive
-  const data : any = descriptionActiveVideo
+  const data: any = descriptionActiveVideo
 
   const title = data[0]?.title || ''
   const description = data[0]?.description || ''
@@ -43,12 +43,12 @@ function VideoContent({ videosEnvi, isVideoActive, descriptionActiveVideo }: Vid
             <h3>{title}</h3>
             <p>{description}</p>
           </section>
-          <ReactPlayer  width='100%' height='75%' controls url={videoParaAssistir} />
+          <ReactPlayer width='100%' height='75%' controls url={videoParaAssistir} />
         </>
       ) : (
         <span>
           Ola Hoteleiro,
-          <br/>
+          <br />
           Por favor selecione uma de nossas aulas para assistir
         </span>
       )}

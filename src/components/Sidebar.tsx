@@ -1,7 +1,7 @@
 import '../App.css'
 
 interface SidebarProps {
-  videosEnvi :{
+  videosEnvi: {
     id: string;
     title: string;
     link: string;
@@ -11,26 +11,26 @@ interface SidebarProps {
   isActiveVideo: (link: any) => void;
 }
 
- const Sidebar = ({videosEnvi, isActiveVideo}:SidebarProps) => {
+const Sidebar = ({ videosEnvi, isActiveVideo }: SidebarProps) => {
 
-  function HandleActiveVideo(link: any){
+  function HandleActiveVideo(link: any) {
     isActiveVideo(link)
   }
 
   return (
     <div className='sidebar-container'>
-     {videosEnvi?.map( (video:any) => {
+      {videosEnvi?.map((video: any) => {
         return (
 
           <div key={video.id}>
             <button type='button' onClick={() => HandleActiveVideo(video.link)}>
-            {video.title}
+              {video.title}
             </button>
-           
+
           </div>
-           
+
         )
-     })}
+      })}
     </div>
   )
 

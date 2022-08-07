@@ -35,7 +35,7 @@
   gap: 10px;
 
 
-/*   width: 60%;
+  /*   width: 60%;
   height: 60%;
   left: 32px;
   top: 88px; */
@@ -79,15 +79,15 @@
 
 .video-text p {
   font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-display: flex;
-align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
 
-/* text/text.primary */
+  /* text/text.primary */
 
-color: #24262B;
+  color: #24262B;
 }
 
 
@@ -99,19 +99,18 @@ color: #24262B;
 }
 
 
-.sidebar-container div{
+.sidebar-container div {
   display: flex;
-  border-bottom:  1px solid silver;
+  border-bottom: 1px solid silver;
   margin-bottom: 10px;
 }
 
-.sidebar-container div button{
- width: 100%;
- padding: 8px;
- background: transparent;
- border: 0;
- color: #070707;
- text-align: initial;
- text-transform: uppercase;
+.sidebar-container div button {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: 0;
+  color: #070707;
+  text-align: initial;
+  text-transform: uppercase;
 }
-
